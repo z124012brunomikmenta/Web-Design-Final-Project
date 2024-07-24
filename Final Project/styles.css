@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.welcome {
+    text-align: center;
+}
+
+.welcome h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.welcome p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Banner Section */
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+.profile img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+/* Main Content */
+.container {
+    display: flex;
+    flex: 1;
+}
+
+.filters {
+    width: 13em;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.game-list {
+    flex: 1;
+    padding: 20px;
+}
+
+.game-item {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.game-image img {
+    width: 94px;
+    height: 112px;
+    object-fit: cover;
+}
+
+.game-details {
+    flex: 1;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.game-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.game-rating {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.game-genres {
+    font-size: 0.9em;
+    color: #777;
+}
+.game-play-count {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.user-score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.score-button:hover {
+    background-color: #0056b3;
+}
+
+.game-comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.add-comment-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-comment-button:hover {
+    background-color: #45a049;
+}
+
+.edit-comment-button {
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.edit-comment-button:hover {
+    background-color: #ecc20a
+}
+
+.remove-from-list-button {
+    background-color: #ff1919;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.remove-from-list-button:hover {
+    background-color: #f61919;
+}
+
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-out, transform 1s ease-out;
+    transform-origin: top right;
+    transform: scaleY(0);
+}
+
+.dropdown-option {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-option:hover {
+    background-color: #f0f0f0;
+}
+
+.show-dropdown {
+    display: block;
+    max-height: 600px;
+    transform: scaleY(1);
+}
+
+.login-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+.logout-button {
+    background-color: #f44336;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-right: 10px;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+}
+
+.user-games {
+    display: flex;
+    flex-direction: column;
+}
+
+.game-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.game-image img {
+    width: 100px;
+    height: 100px;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.game-title {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.game-genres {
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.user-score {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.search-bar {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.search-bar form {
+    display: inline-block;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    width: 10em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+.apply-button{
+    padding: 5px 10px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
