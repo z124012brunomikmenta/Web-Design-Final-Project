@@ -55,15 +55,12 @@
         <!-- Game List Section -->
         <main class="game-list">
             <?php
-                
-
                 // Determine sorting method
                 $sort_method = isset($_GET['sort']) ? $_GET['sort'] : 'highest-rated';
                 $order_by = $sort_method == 'most-popular' ? 'gamePlayCount DESC' : 'gameOverallRating DESC';
 
                 // Get search term
                 $search_term = isset($_GET['search']) ? $conn->real_escape_string($_GET['search']) : '';
-
 
                 // Build genre filter query
                 $genre_filter = '';
@@ -105,8 +102,8 @@
                         echo '<div class="game-item">';
                             echo '<div class="game-image"><img src="' . $image_path . '" alt="' . $row["gameTitle"] . '" onerror="this.onerror=null;this.src=\'assets/game-image/placeholder.png\';"></div>';
                             echo '<div class="game-details">';
-                                echo '<div class="game-title">' . $rank . ". " . $row["gameTitle"] . ' (' . $row["gameReleaseYear"] . ')</div>';
                                 echo '<div class="game-rating">' . "Score: " . $row["gameOverallRating"] . '</div>';
+                                echo '<div class="game-title">' . $rank . ". " . $row["gameTitle"] . ' (' . $row["gameReleaseYear"] . ')</div>';
                                 echo '<div class="game-genres">' . $row["gameGenres"] . '</div>';
                                 echo '<div class="game-play-count">' . "Players: " . $row["gamePlayCount"] . '</div>';
                             echo '</div>';

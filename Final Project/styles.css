@@ -341,6 +341,60 @@ nav ul li a:hover {
     cursor: pointer;
 }
 
+.status-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.status-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.status-menu.show {
+    display: block;
+}
+
+.status-option {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.status-option:hover {
+    background-color: #ddd;
+}
+
+.status-button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.status-completed {
+    background-color: blue;
+    color: white;
+}
+
+.status-playing {
+    background-color: green;
+    color: white;
+}
+
+.status-plan-to-play {
+    background-color: grey;
+    color: white;
+}
+
 /* Media query for small screens */
 @media (max-width: 768px) {
     .filters {
