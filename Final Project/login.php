@@ -43,7 +43,7 @@
                     setcookie('userName', $user['userName'], time() + (86400 * 30), "/");
                     header('Location: index.php');
                 } else {
-                    echo "Invalid password";
+                    echo "Invalid password.";
                 }
             } else {
                 echo "No user found with this email.";

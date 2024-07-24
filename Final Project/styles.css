@@ -96,21 +96,13 @@ nav ul li a:hover {
     object-fit: cover;
 }
 
-.game-details {
-    flex: 1;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.game-title {
+.game-rating {
     font-size: 1.5em;
     font-weight: bold;
     color: #333;
 }
 
-.game-rating {
+.game-title {
     font-size: 1.2em;
     color: #555;
 }
@@ -149,13 +141,6 @@ nav ul li a:hover {
     background-color: #0056b3;
 }
 
-.game-comments {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5px;
-}
-
 .add-comment-button {
     background-color: #4caf50;
     color: white;
@@ -168,20 +153,6 @@ nav ul li a:hover {
 
 .add-comment-button:hover {
     background-color: #45a049;
-}
-
-.edit-comment-button {
-    background-color: #ffcc00;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    margin-left: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.edit-comment-button:hover {
-    background-color: #ecc20a
 }
 
 .remove-from-list-button {
@@ -197,7 +168,6 @@ nav ul li a:hover {
 .remove-from-list-button:hover {
     background-color: #f61919;
 }
-
 
 .dropdown {
     display: none;
@@ -326,6 +296,41 @@ nav ul li a:hover {
     background-color: #0056b3;
 }
 
+.game-details {
+    flex: 1 0 auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+}
+
+.game-comments {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    justify-content: space-between;
+}
+
+.comment-box {
+    width: 100%;
+}
+.comment-buttons {
+    display: flex;
+    flex-direction: column;
+}
+.change-status-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 2em;
+}
+
 .apply-button{
     padding: 5px 10px;
     margin-top: 10px;
@@ -334,4 +339,34 @@ nav ul li a:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .filters {
+        display: none; /* Hide filters by default */
+    }
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .game-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .game-details {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .game-comments {
+        align-items: flex-start;
+        max-width: 100%;
+        flex: 1 1 auto;
+    }
+    .change-status-button {
+        margin-bottom: 0;
+    }
 }
