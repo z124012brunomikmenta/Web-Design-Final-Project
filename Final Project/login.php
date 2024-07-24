@@ -8,19 +8,44 @@
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="form-container">
-        <h2>Login</h2>
-        <form action="login.php" method="POST">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            
-            <button type="submit">Login</button>
-        </form>
-        <p>Don't have an account yet? <a href="register.php">Register here</a></p>
+<div class="wide-container">
+    <div class="welcome-section">
+        <div class="welcome-content">
+            <h1>Welcome Back!</h1>
+            <img src="assets/logo.png" alt="Website Logo" class="logo">
+            <h2>Dive back into the gaming world!</h2>
+            <p>See the latest rankings, updates, and stats! Ready to continue your journey? Log in and explore what’s new!</p>
+        </div>
     </div>
+    <div class="form-section">
+        <div class="form-container">
+            <h2>Log In</h2>
+            <form action="login.php" method="POST">
+                <div class="input-group">
+                    <div class="input-icon">
+                        <img src="assets/user-data-icon.svg" alt="Username Icon">
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-icon">
+                        <img src="assets/envelope-line-icon.svg" alt="Email Icon">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-icon">
+                        <img src="assets/lock-line-icon.svg" alt="Password Icon">
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+                </div>
+                <button type="submit">Log In</button>
+            </form>
+            <p>Don't have an account yet?<p>
+            <p><a href="register.php">Register here</a></p>
+        </div>
+    </div>
+</div>
 
     <?php
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {

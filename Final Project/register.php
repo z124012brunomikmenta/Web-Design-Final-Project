@@ -5,24 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="form-container">
-        <h2>Register</h2>
-        <form action="register.php" method="POST">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            
-            <button type="submit">Register</button>
-        </form>
-        <p>Already have an account? <a href="login.php">Login here</a></p>
+<div class="wide-container">
+    <div class="welcome-section">
+        <div class="welcome-content">
+            <h1>Welcome to GameRanker!</h1>
+            <img src="assets/logo.png" alt="Website Logo" class="logo">
+            <h2>Join GameRanker Today!</h2>
+            <p>Become part of our growing community! Ready to begin your journey? Sign up and discover the best games now!</p>
+        </div>
     </div>
+    <div class="form-section">
+        <div class="form-container">
+            <h2>Register</h2>
+            <form action="register.php" method="POST">
+                <div class="input-group">
+                    <div class="input-icon">
+                        <img src="assets/user-data-icon.svg" alt="Username Icon">
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-icon">
+                        <img src="assets/envelope-line-icon.svg" alt="Email Icon">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-icon">
+                        <img src="assets/lock-line-icon.svg" alt="Password Icon">
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account?<p>
+            <p><a href="login.php">Login here</a></p>
+        </div>
+    </div>
+</div>
 
     <?php
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
